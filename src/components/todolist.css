@@ -1,0 +1,13 @@
+.todo-div {
+  width: fit-content;
+
+  background-color: #0cd4ee;
+  margin: 20px auto;
+  font-size: 30px;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+}
+.icons {
+  margin-left: 40px;
+}
