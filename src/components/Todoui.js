@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./todo.css";
-import { HiX } from "react-icons/hi";
+import { FcEmptyTrash } from "react-icons/fc";
 
 //get localstroage data
 const getData = () => {
@@ -36,41 +36,46 @@ const Todoui = () => {
   };
 
   return (
-    <div className="container">
-      <div className="box">
-        <div className="box-data">
-          <h1>Add Tod0s here....</h1>
-          <input
-            type="text"
-            value={input}
-            required
-            id="name"
-            placeholder="write something..."
-            onChange={(e) => {
-              setinput(e.target.value);
-            }}
-            onKeyDown={handleSubmit}
-          />
+    <>
+      <div className="heading">
+        <h2>TODO LISTS</h2>
+      </div>
+      <div className="container">
+        <div className="box">
+          <div className="box-data">
+            <input
+              className="input"
+              type="text"
+              value={input}
+              required
+              id="name"
+              placeholder="write something..."
+              onChange={(e) => {
+                setinput(e.target.value);
+              }}
+              onKeyDown={handleSubmit}
+            />
 
-          <button className="btn" name="btn" onClick={handleSubmit}>
-            Add
-          </button>
-          {list.map((itemval, ind) => {
-            return (
-              <div className="todo-div">
-                {itemval}
-                <HiX
-                  className="icons"
-                  onClick={() => {
-                    deleteItem(ind);
-                  }}
-                />
-              </div>
-            );
-          })}
+            <button className="btn" name="btn" onClick={handleSubmit}>
+              Add
+            </button>
+            {list.map((itemval, ind) => {
+              return (
+                <div className="todo-div">
+                  {itemval}
+                  <FcEmptyTrash
+                    className="icons"
+                    onClick={() => {
+                      deleteItem(ind);
+                    }}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

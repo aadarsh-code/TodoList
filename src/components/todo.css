@@ -4,68 +4,142 @@
   box-sizing: border-box;
 }
 body {
-  background-color: blue;
+  background-color: black;
 }
+
 .container {
   text-align: center;
   height: 100vh;
   display: flex;
   justify-content: center;
+
   margin-top: 70px;
 }
+h2 {
+  font-family: "Zen Old Mincho", serif;
+  color: white;
+  letter-spacing: 5px;
+}
+.heading {
+  text-align: center;
+  border: 3px white solid;
+}
+
 .box {
   width: 700px;
   height: 500px;
-  background-color: yellowgreen;
+  background-color: grey;
   display: flex;
   justify-content: center;
   border-radius: 30px;
-
-  text-align: center;
+  margin-top: 70px;
+  align-items: center;
 }
 .box-data {
   width: 50%;
   height: max-content;
-  background-color: crimson;
-  text-align: center;
+  background-color: white;
+
   margin-top: 60px;
   border-radius: 10px;
 }
-input {
+.input {
   margin-top: 20px;
-  padding: 10px;
+  /* padding: 10px; */
   width: 70%;
-  border-radius: 10px;
-  border-bottom: 3px solid brown;
-  border: none;
+  border-radius: 2px;
+
   font-family: "Lora";
   font-size: 20px;
   margin-bottom: 15px;
+  border-bottom: 4px solid green;
+
+  border: none;
+  border-bottom: 4px solid #1890ff;
+  padding: 5px 10px;
+  outline: none;
 }
 .btn {
   height: 30px;
-  width: 40px;
+  width: 18%;
   border-radius: 10px;
   padding: 5px;
   margin-left: 10px;
+  background-color: #1fae51;
+  font-weight: 400;
+  font-size: 20px;
+  font-family: "Roboto Slab", serif;
+  color: white;
 }
 .todo-div {
-  width: fit-content;
+  width: 80%;
 
-  background-color: #0cd4ee;
+  background-color: #3cacecf8;
   margin: 20px auto;
   font-size: 30px;
   font-family: "Lora", "serif";
   text-align: center;
-  align-items: center;
-  padding: 10px;
+  color: white;
+
+  padding: 5px;
 }
 .icons {
   margin-left: 40px;
 }
-.icons:hover {
-  color: red;
-}
+/* .icons:hover {
+ 
+} */
 .todo-div:hover {
-  background-color: white;
+  background-color: red;
+}
+@media (max-width: 760px) {
+  .box {
+    margin: 0 40px;
+  }
+}
+@media (max-width: 550px) and (min-width: 400px) {
+  .box-data {
+    width: 100%;
+  }
+  .box {
+    margin: 0 40px;
+    box-sizing: border-box;
+  }
+  .btn {
+    width: auto;
+  }
+  .todo-div {
+    width: auto;
+    height: auto;
+  }
+}
+@media (max-width: 250px) {
+  .box-data {
+    width: 100%;
+  }
+  .box {
+    margin: 0 40px;
+  }
+  .btn {
+    width: auto;
+  }
+  .todo-div {
+    width: auto;
+    height: auto;
+  }
+}
+@media (max-width: 380px) {
+  .box-data {
+    width: 100%;
+  }
+  .box {
+    margin: 0 40px;
+  }
+  .btn {
+    width: auto;
+  }
+  .todo-div {
+    width: auto;
+    height: auto;
+  }
 }
